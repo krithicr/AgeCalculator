@@ -37,6 +37,10 @@
   font-size: 22px;
   font-weight: 800;
 }
+.input_box::placeholder{
+  font-size: 16px;
+  opacity: 0.5;
+}
 .label{
   font-size: 12px;
   text-transform: uppercase;
@@ -139,5 +143,8 @@
   }
   .lower_values{
     margin-top: 25px;
+  }
+  .label{
+    margin-left: -10px;
   }
 }

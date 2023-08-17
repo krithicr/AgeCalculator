@@ -64,19 +64,34 @@ function CalculatorBox() {
         <form onSubmit={handleSubmit(submitValues)}>
           <div className="date">
             <label className="label">Date</label>
-            <input className="input_box" type="number" {...register("Date")} />
+            <input
+              className="input_box"
+              type="number"
+              {...register("Date")}
+              placeholder="dd"
+            />
             {<p className="alert">{errors?.Date?.message}</p>}
           </div>
 
           <div className="month">
             <label className="label">Month</label>
-            <input className="input_box" type="number" {...register("Month")} />
+            <input
+              className="input_box"
+              type="number"
+              {...register("Month")}
+              placeholder="mm"
+            />
             {<p className="alert">{errors?.Month?.message}</p>}
           </div>
 
           <div className="year">
             <label className="label">Year</label>
-            <input className="input_box" type="number" {...register("Year")} />
+            <input
+              className="input_box"
+              type="number"
+              {...register("Year")}
+              placeholder="yyyy"
+            />
             {<p className="alert">{errors?.Year?.message}</p>}
           </div>
           <button className="button" type="submit">

@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+.app{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+  font-family: 'Poppins', sans-serif;
+}
+.calculatorBox{
+  height: 55%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  border-bottom-right-radius: 150px;
+}
+
+.input_box{
+  width: 120px;
+  min-height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid hsl(0, 0%, 86%);
+  text-indent: 20px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.label{
+  font-size: 12px;
+  text-transform: uppercase;
+  color:hsl(0, 0%, 8%);
+  opacity: .6;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.date{
+  height: 50px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.month{
+  height: 50px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.year{
+  height: 50px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.upper_values{
+  /* height: 50%; */
+  flex: 0.4;
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-bottom: 2px solid hsl(0, 0%, 86%);
+}
+.lower_values{
+  /* height: 50%; */
+  flex: 0.6;
+}
+.upper_values > form{
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  
+}
+
+.img{
+  height: 40px;
+  width: 40px;
+  
+}
+.button{
+  height: 70px;
+  min-width: 70px;
+  max-width: 70px;
+  border-radius: 80px;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  outline: none;
+}
+.button{
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+
+.Values{
+  height:100px ;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.Values > h1{
+  font-size: 45px;
+}
+
+.alert{
+  font-size: 12px;
+  color: red;
+}
+
+
+@media(max-width:600px) {
+
+  .app{
+    height: 980px;
+    width: 500px;
+  }
+  .calculatorBox{
+    width: 60%;
+  }
+  .input_box{
+    margin-left: -20px;
+    width: 90px;
+  }
+  .button{
+    transform: translate(-150%,10%);
+  }
+  .lower_values{
+    margin-top: 25px;
+  }
+}

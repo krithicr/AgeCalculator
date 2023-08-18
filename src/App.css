@@ -16,8 +16,8 @@
   font-family: 'Poppins', sans-serif;
 }
 .calculatorBox{
-  height: 55%;
-  width: 40%;
+  height: 57%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);

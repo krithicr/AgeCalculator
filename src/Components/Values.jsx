@@ -11,9 +11,9 @@ function Values({ data }) {
   let currentMonth = d.getMonth() + 1;
   let currentDay = d.getDate();
 
-  let yearsOld = "--";
-  let monthsOld = "--";
-  let daysOld = "--";
+  let yearsOld;
+  let monthsOld;
+  let daysOld;
 
   if (years !== null && months !== null && days !== null) {
     yearsOld = currentYear - years;
@@ -25,9 +25,13 @@ function Values({ data }) {
       yearsOld--;
     }
 
-    monthsOld = currentMonth - months;
-    if (monthsOld < 0) {
-      monthsOld += 12;
+    if (
+      currentMonth < months ||
+      (currentMonth === months && currentDay < days)
+    ) {
+      monthsOld = currentMonth - months + 12;
+    } else {
+      monthsOld = currentMonth - months;
     }
     if (currentDay < days) {
       monthsOld--;
@@ -35,15 +39,15 @@ function Values({ data }) {
 
     daysOld = currentDay - days;
     if (currentDay < days) {
-      daysOld += 31;
+      daysOld += new Date(currentYear, currentMonth, 0).getDate();
     }
   }
 
   return (
     <div className="Values">
-      <h1>{yearsOld} years</h1>
-      <h1>{monthsOld} months</h1>
-      <h1>{daysOld} days</h1>
+      <h1>{yearsOld ? yearsOld : "--"} years</h1>
+      <h1>{monthsOld ? monthsOld : "--"} months</h1>
+      <h1>{daysOld ? daysOld : "--"} days</h1>
     </div>
   );
 }
